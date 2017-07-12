@@ -1,0 +1,21 @@
+fields:
+  - name: country
+    class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+    layout: vertical
+    selectionType: select
+    options:
+      - name: africa
+      - name: europe
+        selected: true
+    fields:
+      - name: africa
+        class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+        options:
+          - name: algeria
+          - name: angola
+      - name: europe
+        class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+        options:
+          - name: austria
+          - name: belgium
+          - name: bulgaria
