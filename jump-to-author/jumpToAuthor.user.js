@@ -10,15 +10,29 @@
 
 (function() {
     'use strict';
+    // Author instance and site configuration
     var defaultBaseURL = "http://demoauthor.magnolia-cms.com";
     var defaultExtension = "html";
     var handlePrefix = "/travel";
-    var pathname = window.location.pathname;
+
+    // Get path before selectors and extension.
+    var path = window.location.pathname;
+    console.log("full path: " + path);
+
+    if (path.includes("~")) {
+      path = path.replace(/~.*/, "");
+      console.log("path without selectors: " + path);
+    }
+    else {
+      path = path.replace(/\.[^/.]+$/, "");
+      console.log("path without extension: " + path);
+    }
 
 
-    window.open(defaultBaseURL +
+
+    /* window.open(defaultBaseURL +
       "/.magnolia/admincentral#app:pages:detail;" +
       handlePrefix +
       pathname.replace("." + defaultExtension, "") +
-      ":edit");
+      ":edit"); */
 })();
