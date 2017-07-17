@@ -35,25 +35,21 @@
       console.log("path without extension: " + path);
     }
 
-    // Get first segment of path.
+    // Check if first path segment is a known app prefix.
+
     var pathSegments = path.split("/");
-    console.log("Splitted segments: " + pathSegments);
+    console.log("Path segments: " + pathSegments);
 
     var firstSegment = "/" + pathSegments[1];
     console.log("First segment: " + firstSegment);
 
-    var shiftedSegments = pathSegments.shift();
-    console.log("Shifted segments: " + shiftedSegments);
-
-
-    // Check if first path segment is a known app prefix.
-    if (firstSegment in apps) {
-      console.log("yes, it's in there");
-      console.log("App name: " + apps[firstPathSegment]);
-
-      console.log("App URL: " + defaultBaseURL + "/.magnolia/admincentral#app:" + apps[firstSegment] + ":detail;" + path + ":edit");
+    if ("/" + pathSegments[1] in apps) {
+      console.log("This content is managed in the " + apps[firstSegment] + " app.");
+      pathSegments.shift();
+      console.log("App URL: " + defaultBaseURL + "/.magnolia/admincentral#app:" + apps[firstSegment] + ":detail;" + pathSegments + ":edit");
     } else {
-      console.log("Page URL: " + defaultBaseURL + "/.magnolia/admincentral#app:pages:detail;" + path + ":edit");
+      console.log("This content is managed in the Pages app.");
+      console.log("Page URL: " + defaultBaseURL + "/.magnolia/admincentral#app:pages:detail;" + handlePrefix + path + ":edit");
     }
     /* Object.keys(apps).forEach(function(key) {
       if (apps[key] == firstPathSegment) {
