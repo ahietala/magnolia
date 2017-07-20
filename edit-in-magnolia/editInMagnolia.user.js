@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name          Jump to Magnolia author
+// @name          Edit in Magnolia
 // @namespace     https://github.com/ahietala/magnolia
 // @version       0.1
-// @description	  Move quickly from a public Magnolia instance to the author instance to edit the content.
+// @description	  Go from a public Magnolia instance to edit the content on the author instance.
 // @author        Antti Hietala
 // @match         https://demopublic.magnolia-cms.com/*
 // @grant         none
