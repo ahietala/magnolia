@@ -4,7 +4,7 @@
   "name": "Edit in Magnolia",
   "description": "Go from a public Magnolia instance to edit the content on the author instance.",
   "version": "1.0",
-  "permissions": ["contextMenus"],
+  "permissions": ["contextMenus", "tabs"],
   "background": {
     "scripts": ["editInMagnolia.user.js"]
   }

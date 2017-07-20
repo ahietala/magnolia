@@ -16,19 +16,24 @@ function editInMagnolia() {
   var defaultBaseURL = "http://demoauthor.magnolia-cms.com";
   var defaultExtension = "html";
   var handlePrefix = "/travel";
+  var path = "";
 
-  // URL prefixes that suggest the content is managed in an app
-  // "<URL prefix>":"appName"
+  // URL prefixes that map to content apps
   var apps = {
     "/tours":"tours",
-    "/john":"guitar",
-    "/ringo":"drums",
   };
   console.log(apps);
-  // Remove selectors and extension from the path.
-  var path = window.location.pathname;
-  console.log("full path: " + path);
 
+  // Doesn't work!!!! argh
+  chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
+    const url = new URL(tabs[0].url);
+    console.log(url.hostname); // "www.example.com"
+    console.log(url.pathname); // "/cats"
+    path = url.pathname;
+  });
+
+  // Remove selectors and extension from the path.
+  // var path = window.location.pathname;
   if (path.includes("~")) {
     path = path.replace(/~.*/, "");
     console.log("path without selectors: " + path);
