@@ -4,18 +4,120 @@ fields:
     layout: vertical
     selectionType: select
     options:
+      - name: none
+        selected: true
       - name: africa
       - name: europe
-        selected: true
     fields:
       - name: africa
-        class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+        class: info.magnolia.ui.form.field.definition.TwinColSelectFieldDefinition
+        styleName: antti
         options:
           - name: algeria
           - name: angola
+          - name: benin
+          - name: botswana
+          - name: burkina-faso
+          - name: burundi
+          - name: cabo-verde
+          - name: cameroon
+          - name: central-african-republic-(car)
+          - name: chad
+          - name: comoros
+          - name: democratic-republic-of-the-congo
+          - name: republic-of-the-congo
+          - name: cote-d'ivoire
+          - name: djibouti
+          - name: egypt
+          - name: equatorial-guinea
+          - name: eritrea
+          - name: ethiopia
+          - name: gabon
+          - name: gambia
+          - name: ghana
+          - name: guinea
+          - name: guinea-bissau
+          - name: kenya
+          - name: lesotho
+          - name: liberia
+          - name: libya
+          - name: madagascar
+          - name: malawi
+          - name: mali
+          - name: mauritania
+          - name: mauritius
+          - name: morocco
+          - name: mozambique
+          - name: namibia
+          - name: niger
+          - name: nigeria
+          - name: rwanda
+          - name: sao-tome-and-principe
+          - name: senegal
+          - name: seychelles
+          - name: sierra-leone
+          - name: somalia
+          - name: south-africa
+          - name: south-sudan
+          - name: sudan
+          - name: swaziland
+          - name: tanzania
+          - name: togo
+          - name: tunisia
+          - name: uganda
+          - name: zambia
+          - name: zimbabwe
       - name: europe
         class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
         options:
+          - name: albania
+          - name: andorra
+          - name: armenia
           - name: austria
+          - name: azerbaijan
+          - name: belarus
           - name: belgium
+          - name: bosnia-and-herzegovina
           - name: bulgaria
+          - name: croatia
+          - name: cyprus
+          - name: czech-republic
+          - name: denmark
+          - name: estonia
+          - name: finland
+          - name: france
+          - name: georgia
+          - name: germany
+          - name: greece
+          - name: hungary
+          - name: iceland
+          - name: ireland
+          - name: italy
+          - name: kazakhstan
+          - name: kosovo
+          - name: latvia
+          - name: liechtenstein
+          - name: lithuania
+          - name: luxembourg
+          - name: macedonia-(fyrom)
+          - name: malta
+          - name: moldova
+          - name: monaco
+          - name: montenegro
+          - name: netherlands
+          - name: norway
+          - name: poland
+          - name: portugal
+          - name: romania
+          - name: russia
+          - name: san-marino
+          - name: serbia
+          - name: slovakia
+          - name: slovenia
+          - name: spain
+          - name: sweden
+          - name: switzerland
+          - name: turkey
+          - name: ukraine
+          - name: united-kingdom-(uk)
+          - name: vatican-city-(holy-see)

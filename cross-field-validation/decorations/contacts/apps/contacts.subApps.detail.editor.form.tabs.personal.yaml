@@ -1,0 +1,84 @@
+fields:
+  - name: coffee
+    class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+    layout: vertical
+    label: Favorite drink
+    options:
+      - name: espresso
+        label: Espresso
+      - name: brewed-coffee
+        label: Brewed Coffee
+    fields:
+      - name: espresso
+        class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+        layout: vertical
+        label: ""
+        options:
+          - name: caffe-latte
+            label: Caffe Latte
+          - name: caffe-americano
+            label: Caffe Americano
+          - name: caffe-mocha
+            label: Caffe Mocha
+        fields:
+          - name: caffe-latte
+            class: info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition
+            multiselect: false
+            label: ""
+            sortOptions: false
+            options: &espresso-sizes
+              - name: single
+                label: Single shot
+              - name: double
+                label: Double shot
+          - name: caffe-americano
+            class: info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition
+            multiselect: false
+            label: ""
+            sortOptions: false
+            options: *espresso-sizes
+          - name: caffe-mocha
+            class: info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition
+            multiselect: false
+            label: ""
+            sortOptions: false
+            options: *espresso-sizes
+      - name: brewed-coffee
+        class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+        layout: vertical
+        multiselect: false
+        label: ""
+        options:
+          - name: blonde-roast
+            label: Blonde Roast
+          - name: caffe-misto
+            label: Caffe Misto
+          - name: ice-coffee
+            label: Ice Coffee
+        fields:
+          - name: blonde-roast
+            class: info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition
+            multiselect: false
+            label: ""
+            sortOptions: false
+            options: &brewed-coffee-sizes
+              - name: short
+                label: Short 8 oz
+              - name: tall
+                label: Tall 12 oz
+              - name: grande
+                label: Grande 16 oz
+              - name: venti
+                label: Venti 20 oz
+          - name: caffe-misto
+            class: info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition
+            multiselect: false
+            label: ""
+            sortOptions: false
+            options: *brewed-coffee-sizes
+          - name: ice-coffee
+            class: info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition
+            multiselect: false
+            label: ""
+            sortOptions: false
+            options: *brewed-coffee-sizes
