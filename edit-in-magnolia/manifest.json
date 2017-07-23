@@ -2,9 +2,14 @@
   "manifest_version": 2,
 
   "name": "Edit in Magnolia",
-  "description": "Go from a public Magnolia instance to edit the content on the author instance.",
+  "description": "Edit current content on Magnolia author instance.",
   "version": "1.0",
   "permissions": ["contextMenus", "tabs"],
+  "icons": {
+          "16": "magnolia-icon-16.png",
+          "48": "magnolia-icon-48.png",
+          "128": "magnolia-icon-128.png"
+        },
   "background": {
     "scripts": ["editInMagnolia.user.js"]
   }
