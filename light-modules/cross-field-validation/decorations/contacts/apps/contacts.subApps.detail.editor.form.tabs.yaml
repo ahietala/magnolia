@@ -1,0 +1,43 @@
+- name: drink
+  label: Drink
+  fields:
+    - name: drink
+      class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+      label: Favorite drink
+      selectionType: select
+      options:
+        - name: coffee
+          label: Coffee
+        - name: tea
+          label: Tea
+        - name: wine
+          label: Wine
+      fields:
+        - name: coffee
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          styleName: antti
+          options:
+            - name: regular
+              label: Regular
+            - name: decaf
+              label: Decaf
+            - name: espresso
+              label: Espresso
+            - name: latte
+              label: Latte
+        - name: tea
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          options:
+            - name: black
+              label: Black
+            - name: green
+              label: Green
+        - name: wine
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          options:
+            - name: cabernet
+              label: Cabernet
+            - name: merlot
+              label: Merlot
+            - name: zinfandel
+              label: Zinfandel

@@ -10,8 +10,7 @@ fields:
       - name: europe
     fields:
       - name: africa
-        class: info.magnolia.ui.form.field.definition.TwinColSelectFieldDefinition
-        styleName: antti
+        class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
         options:
           - name: algeria
           - name: angola
