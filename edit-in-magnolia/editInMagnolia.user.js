@@ -18,7 +18,8 @@ function editInMagnolia() {
   var handlePrefix = "/travel";
   var path = "";
 
-  // URL prefixes that map to content apps
+  // Content apps
+  // URL prefix, app name, root path
   var apps = {
     "/tours":"tours",
   };
