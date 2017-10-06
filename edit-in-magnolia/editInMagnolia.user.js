@@ -23,7 +23,9 @@ function editInMagnolia() {
 
   // URL prefixes that map to content apps
   site.apps = {
+    // uriPrefix:appName
     "/tours":"tours",
+    "/stories":"stories"
   };
 
   // Get the current URL
@@ -33,6 +35,14 @@ function editInMagnolia() {
 
     // Remove selectors and extension from the path.
     if (path.includes("~")) {
+      var firstSelectorIndex = path.search("~");
+      var lastSelectorIndex = path.lastIndexOf("~");
+      console.log("path: " + path);
+      console.log("firstSelectorIndex: " + firstSelectorIndex);
+      console.log("lastSelectorIndex: " + lastSelectorIndex);
+      var selectorsInPath = path.slice(firstSelectorIndex, lastSelectorIndex);
+      console.log("path between selectors only: " + selectorsInPath);
+      console.log("selectors separated: " + selectorsInPath.split("~"));
       path = path.replace(/~.*/, "");
     }
     else {
