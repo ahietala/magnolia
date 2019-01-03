@@ -1,2 +1,2 @@
 # magnolia
-Tools for Magnolia CMS
+Tools and scripts for developing on Magnolia CMS.
