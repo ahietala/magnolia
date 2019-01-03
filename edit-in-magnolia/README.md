@@ -1,1 +1,1 @@
-This is an experimental browser add-on that lets you navigate from a web page created with Magnolia to the same content on the Magnolia author instance. It helps to find the content you want to change quicker.
+This is an experimental browser add-on that lets you navigate from a web page created with Magnolia to the same content on the Magnolia author instance. It helps you find the content you want to edit.
